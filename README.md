@@ -36,6 +36,6 @@ To harmonize DNA methylation data for the remaining cohorts, we need to go throu
 Importantly, step 1 need to be run twice for common CpG sites (shared across 450k and EPIC) and EPIC-only CpGs. In ARIES, we need to run this three times (450k-only, EPIC-only and common probes), because we have both EPIC and 450k arrays.
 Step 2 also needs to be run three times, for 450k, EPIC and common probes.
 
-For a detailed protocol, see here.
+For a detailed protocol, see (here)[https://github.com/stegosaurusrox/Lifecourse_Methylome/wiki].
 
 ## 2) extract CpG-specific summary statistics
