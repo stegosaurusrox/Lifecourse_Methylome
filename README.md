@@ -31,7 +31,7 @@ To harmonize DNA methylation data for the remaining cohorts, we need to go throu
 
 - step 1: generate `qc.object` files for each cohort (done at each site and shared centrally)
 - step 2: merge `qc.object` files, quantile normalize together, send `norm.object` files back (done centrally) 
-- step 3: use `qc.object` files to normalize samples (done at each site)
+- step 3: use `norm.object` files to normalize samples (done at each site)
 
 Importantly, step 1 need to be run twice for common CpG sites (shared across 450k and EPIC) and EPIC-only CpGs. In ARIES, we need to run this three times (450k-only, EPIC-only and common probes), because we have both EPIC and 450k arrays.
 Step 2 also needs to be run three times, for 450k, EPIC and common probes.
@@ -39,3 +39,7 @@ Step 2 also needs to be run three times, for 450k, EPIC and common probes.
 For a detailed protocol, see [here](https://github.com/stegosaurusrox/Lifecourse_Methylome/wiki).
 
 ## 2) extract CpG-specific summary statistics
+
+We use the `stat.desc` function from the `pastecs` R package to extract summary statistics per CpG site. In addition, we extract information on 25% and 75% IQR using the `quantile` function.
+
+For a detailed protocol, see [here](https://github.com/stegosaurusrox/Lifecourse_Methylome/wiki).
